@@ -1,0 +1,551 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050816;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(0,0,0,0.5);
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.logo{
+
+    color:#00ffe5;
+
+    font-size:32px;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-shadow:0 0 10px #00ffe5;
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+
+    color:#00ffe5;
+}
+
+/* CART */
+
+.cart{
+
+    background:#00ffe5;
+
+    color:black;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    box-shadow:0 0 15px #00ffe5;
+}
+
+/* HERO */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.8)),
+    url('images/banner.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero-content h2{
+
+    font-size:70px;
+
+    color:#00ffe5;
+
+    text-shadow:0 0 20px #00ffe5;
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    margin-bottom:30px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:#00ffe5;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    transition:0.4s;
+
+    box-shadow:0 0 15px #00ffe5;
+}
+
+.btn:hover{
+
+    transform:scale(1.08);
+}
+
+/* PRODUCTS */
+
+.products{
+
+    padding:100px 8%;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:45px;
+
+    color:#00ffe5;
+
+    margin-bottom:50px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.product-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.product-card{
+
+    background:#111827;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+    border:1px solid rgba(0,255,229,0.2);
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,255,229,0.3);
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+}
+
+.product-card-content{
+
+    padding:20px;
+}
+
+.product-card h3{
+
+    margin-bottom:10px;
+
+    font-size:24px;
+}
+
+.product-card p{
+
+    color:#00ffe5;
+
+    margin-bottom:18px;
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+.product-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#00ffe5;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.product-card button:hover{
+
+    background:white;
+}
+
+/* CART SIDEBAR */
+
+.cart-sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-400px;
+
+    width:350px;
+
+    height:100vh;
+
+    background:#0b1020;
+
+    padding:30px;
+
+    transition:0.5s;
+
+    z-index:2000;
+
+    border-left:2px solid #00ffe5;
+}
+
+.cart-sidebar.active{
+
+    right:0;
+}
+
+.cart-sidebar h2{
+
+    color:#00ffe5;
+
+    margin-bottom:30px;
+}
+
+.cart-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+
+    padding-bottom:10px;
+}
+
+.cart-item span{
+
+    color:#00ffe5;
+}
+
+/* CONTACT */
+
+.contact{
+
+    text-align:center;
+
+    padding:80px 8%;
+
+    background:#0b1020;
+}
+
+.contact h2{
+
+    color:#00ffe5;
+
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+
+    background:black;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .hero-content h2{
+
+        font-size:42px;
+    }
+
+}
+/* ===== FLOATING ANIMATION ===== */
+
+.product-card{
+
+    animation:floatCard 4s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ===== NEON BORDER GLOW ===== */
+
+
+
+/* ===== HERO TEXT GLOW ===== */
+
+.hero-content h2{
+
+    animation:neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse{
+
+    from{
+
+        text-shadow:
+        0 0 10px #00ffe5,
+        0 0 20px #00ffe5,
+        0 0 40px #00ffe5;
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px #00ffe5,
+        0 0 40px #00ffe5,
+        0 0 80px #00ffe5;
+    }
+
+}
+
+/* ===== BUTTON SHINE EFFECT ===== */
+
+.product-card button{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.product-card button::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(255,255,255,0.4);
+
+    transform:skewX(-30deg);
+
+    transition:0.7s;
+}
+
+.product-card button:hover::before{
+
+    left:120%;
+}
+
+/* ===== NAVBAR GLOW ===== */
+
+.navbar{
+
+    box-shadow:
+    0 0 15px rgba(0,255,229,0.2);
+}
+
+/* ===== IMAGE ZOOM EFFECT ===== */
+
+.product-card{
+
+    overflow:hidden;
+}
+
+.product-card img{
+
+    transition:0.5s;
+}
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+}
+
+/* ===== SECTION FADE ANIMATION ===== */
+
+.products,
+.contact{
+
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===== BACKGROUND GLOW CIRCLES ===== */
+
+body::before{
+
+    content:'';
+
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:#00ffe5;
+
+    filter:blur(180px);
+
+    opacity:0.08;
+
+    top:-100px;
+    left:-100px;
+
+    z-index:-1;
+}
+
+body::after{
+
+    content:'';
+
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#8a2eff;
+
+    filter:blur(180px);
+
+    opacity:0.08;
+
+    bottom:-100px;
+    right:-100px;
+
+    z-index:-1;
+}
